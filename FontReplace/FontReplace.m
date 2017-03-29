@@ -9,6 +9,8 @@
 #import "FontReplace.h"
 #import "mach_override.h"
 
+#define kNSCTFontUIUsageAttribute @"NSCTFontUIUsageAttribute"
+
 typedef CTFontRef (*CTProc)();
 CTProc CTFontCreateWithFontDescriptorOriginal;
 
@@ -18,7 +20,7 @@ NSDictionary *replaceFonts;
 
 + (void)load {
     // Load font dictionary
-    replaceFonts = [NSDictionary dictionaryWithContentsOfFile:@"/Library/Preferences/eu.rensbr.FontReplace.plist"];
+    replaceFonts = [NSDictionary dictionaryWithContentsOfFile:@"/Library/Preferences/eu.rensbr.FontReplace.settings.plist"];
     
     // Override CTFontCreateWithFontDescriptor
     mach_override_ptr((void*)&CTFontCreateWithFontDescriptor,
@@ -36,7 +38,7 @@ CTFontRef CTFontCreateWithFontDescriptorOverride(CTFontDescriptorRef  _Nonnull d
     if (replaceFontName) {
         // Update descriptor
         NSMutableDictionary *mutableDictionary = [(__bridge NSDictionary *)dictionary mutableCopy];
-        [mutableDictionary removeObjectForKey:@"NSCTFontUIUsageAttribute"];
+        [mutableDictionary removeObjectForKey:kNSCTFontUIUsageAttribute];
         [mutableDictionary setValue:replaceFontName forKey:NSFontNameAttribute];
         
         descriptor = CTFontDescriptorCreateWithAttributes((__bridge CFDictionaryRef)mutableDictionary);
