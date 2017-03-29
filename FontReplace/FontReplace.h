@@ -6,7 +6,7 @@
 //  Copyright © 2017 Rens Breur. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Cocoa;
 
 @interface FontReplace : NSObject
 
