@@ -24,6 +24,3 @@ The property list eu.rensbr.FontReplace.settings.plist is a dictionary with the 
 <key>System-Fontname</key>
 <string>Replace-Fontname</string>
 ```
-
-### For developers
-CTFontDescriptorCreateForUITypeOverride (private API) seems like a better function to overwrite when replacing the system font, as it simply returns the CTFontDescriptor for a given UI element type. However, unfortunately this method is not used for all system text drawing. In particular, column and list view in Finder don't use this function.
