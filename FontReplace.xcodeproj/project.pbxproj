@@ -51,7 +51,6 @@
 		2E82AA031E8A907C00FD2F2B /* udis86.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = udis86.h; sourceTree = "<group>"; };
 		2E87B5D71E8C6AA300B62F32 /* eu.rensbr.FontReplace.settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = eu.rensbr.FontReplace.settings.plist; sourceTree = "<group>"; };
 		2E87B5D81E8C6AF800B62F32 /* eu.rensbr.FontReplace.launch.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = eu.rensbr.FontReplace.launch.plist; sourceTree = "<group>"; };
-		2E87B5D91E8C706900B62F32 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +74,6 @@
 		2E7D49C51E89A27600F489AB = {
 			isa = PBXGroup;
 			children = (
-				2E87B5D91E8C706900B62F32 /* screenshot.png */,
 				2E87B5D71E8C6AA300B62F32 /* eu.rensbr.FontReplace.settings.plist */,
 				2E87B5D81E8C6AF800B62F32 /* eu.rensbr.FontReplace.launch.plist */,
 				2E7D49D01E89A27700F489AB /* FontReplace */,
