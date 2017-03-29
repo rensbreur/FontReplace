@@ -6,13 +6,13 @@ FontReplace is a plugin for replacing the system fonts on macOS 10.12 Sierra, by
 
 ### Getting started
 * System Integrity Protection must be disabled in order for this to work.
-* Move eu.rensbr.FontReplace.settings.plist to /Library/Preferences
+* Move FontReplace.settings.plist to /Library/Preferences
 * Move libFontReplace.dylib to /Library
 * Use the following command to load the plugin:
-```bash
+```
 launchctl setenv DYLD_INSERT_LIBRARIES /Library/libFontReplace.dylib
 ```
-* Move eu.rensbr.FontReplace.launch.plist to /Library/LaunchAgents to automatically load the plugin at login.
+* Move FontReplace.launch.plist to /Library/LaunchAgents to automatically load the plugin at login.
 
 ### How it works
 This library overwrites the CTFontCreateWithFontDescriptor() function of the Core Text Framework, the function most frequently used to create a CTFont. It then checks and if necessary replaces the font name in the CTFontDescriptor.
