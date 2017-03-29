@@ -20,7 +20,7 @@ NSDictionary *replaceFonts;
 
 + (void)load {
     // Load font dictionary
-    replaceFonts = [NSDictionary dictionaryWithContentsOfFile:@"/Library/Preferences/eu.rensbr.FontReplace.settings.plist"];
+    replaceFonts = [NSDictionary dictionaryWithContentsOfFile:@"/Library/Preferences/FontReplace.settings.plist"];
     
     // Override CTFontCreateWithFontDescriptor
     mach_override_ptr((void*)&CTFontCreateWithFontDescriptor,
